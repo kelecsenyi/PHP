@@ -1,0 +1,16 @@
+.card
+{
+	height: 630px;
+}
+
+#cart-item
+{
+	text-align: center;
+	padding:0.3rem 0.5rem 0.3rem 0.5rem;
+	border-radius: 3rem;
+}
+body
+{
+	background-color: white;
+}
+

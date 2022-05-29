@@ -1,0 +1,25 @@
+#cart_count
+{
+	text-align: center;
+	padding:0.3rem 0.5rem 0.3rem 0.5rem;
+	border-radius: 3rem;
+}
+
+#bal
+{
+	border-right: solid 2px;
+	border-color: gray;
+}
+body
+{
+	background-color: lightgray;
+}
+button
+{
+	margin-top: 20px;
+}
+
+.container
+{
+	margin-top:20px;
+}

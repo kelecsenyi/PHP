@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --background:#f8f8f8;
+    --menu:#60A3D9;
+    --hover:#003B73;
+    --white:#ffff;
+}
+
+body{
+    background: var(--background);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+/*---===== HEADER =====---*/
+header{
+    height: 70px; 
+    background: var(--menu);
+}
+
+nav{ 
+    max-width: 1150px; 
+    margin: 0 auto; 
+    padding: 0 1rem;
+    display: flex; 
+    flex-flow: row nowrap; 
+    align-items: center; 
+    justify-content: space-between; 
+    height: 100%
+}
+
+.logo { 
+    color: var(--white); 
+    font-size: 1.2rem; 
+    font-weight: 500;
+    margin: 0;
+}
+
+.menu { 
+    display: flex; 
+    flex-flow: row wrap; 
+    list-style: none;
+    margin: 0; 
+    padding: 0 
+}
+
+.menu li{
+    border-radius: 3px;
+}
+
+.menu li.active{
+    background-color: var(--hover)
+}
+
+.icon{
+    margin: 0.3rem 0 0 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--white);
+}
+
+.menu a {
+    text-decoration: none; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    margin: 0 5px;
+    border-radius: 3px;
+    transition: all .3s;
+}
+
+.menu a:hover { 
+    background: var(--hover);
+    transition: all .3s;
+}
+
+.menu-btn{
+    display: none;
+}
+
+.menu-btn-burger{
+    width: 40px;
+    height: 5px;
+    background-color: var(--white);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    background-color: var(--white);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-burger::before{
+    transform: translateY(-14px);
+}
+.menu-btn-burger::after{
+    transform: translateY(14px);
+}
+
+@media (max-width: 930px) {
+    .menu-btn{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+    }
+
+    .menu-btn.open .menu-btn-burger{
+        transform: translateX(-50px);
+        background: transparent;
+    }
+	.menu-btn.open .menu-btn-burger::before { transform: rotate(45deg) translate(35px, -35px); }
+	.menu-btn.open .menu-btn-burger::after { transform: rotate(-45deg) translate(35px, 35px); }
+    
+    .menu-btn.open ~ .menu { 
+        transform: scaleY(1);
+        opacity: 1;
+        }
+
+	.menu { 
+        background: var(--menu);
+        position: absolute; 
+        top: 70px;
+        left: 0; 
+        width: 100%;
+        opacity: 0; 
+        transform: scaleY(0); 
+        transition: transform .3s;
+        transition: opacity .5s;
+        transform-origin: top ;
+        flex-flow: column wrap;
+        justify-content: center; 
+        align-items: center; 
+    }
+    .menu li{
+        width:100%;
+        text-align: center;
+        border-bottom: 1px solid var(--white);
+    }
+
+	.menu a { 
+        margin: 0;
+        border-radius: 0;
+        color: var(--white);
+    }
+    .menu a:hover { 
+        background: var(--hover);
+        color: black;
+        transition: all .3s;
+    }
+}
+
+/*---===== LOGIN AND SIGN UP =====---*/
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: .8rem 1.4rem;
+    margin: .5rem 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.button{
+    background-color: #04AA6D;
+    font-size: 1rem;
+    color: var(--white);
+    padding: 1rem 1.4rem;
+    margin: 1rem;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: .5rem;
+}
+
+.center{
+    text-align: center;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.wrapper {
+    padding: 1rem;
+    width: 50%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    margin: 0 auto;
+}
+
+/*---===== MAIN =====---*/
+section{
+    max-width: 1150px; 
+    margin: 1rem auto; 
+    padding: 0 1rem;
+}
+
+/*---===== ADD NEWS =====---*/
+textarea{
+    resize: none;
+}

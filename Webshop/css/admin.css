@@ -1,0 +1,50 @@
+.OrderId
+{
+	width: 20%;
+	font-weight: bold;
+	color: blue;
+	font-size: 14px;
+	padding-left: 20px;
+}
+.section-container
+{
+	width: 100%;
+	position: relative;
+	display: block;
+
+}
+
+.title
+{
+	padding:8px;
+	background-color: lightgray;
+	cursor: pointer;
+	border: solid 1px #ccc;
+	width: 100%;
+	display: table;
+}
+.title:hover + #hide{
+	display: block;
+}
+#hide{
+	display: none;
+}
+.orderdata
+{
+	border:1px solid #dfdfdf;
+	background-color: white;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 10px;
+}
+p
+{
+	font-family: inherit;
+	display: block;
+	font-size: 15px;
+}
+
+.date
+{
+	margin-left: 400px;
+}
