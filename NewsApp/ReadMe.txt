@@ -1,4 +1,4 @@
-DataBase:phpmysql with MySql
+DataBase:phpmyadmin with MySql
 DataBase name: newsapp
 SQL file at: admin/SQL
 Admin login: username: teszt;	password:123
